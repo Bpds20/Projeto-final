@@ -28,6 +28,7 @@ def verificar_fim_de_jogo():
     return False
 
 
+
 while not verificar_fim_de_jogo() and "" in tabuleiro:
     exibir_tabuleiro()
     try:
