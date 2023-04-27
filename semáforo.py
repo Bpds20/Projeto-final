@@ -18,9 +18,13 @@ def verificar_fim_de_jogo():
         if tabuleiro[i] == tabuleiro[i+4] == tabuleiro[i+8] and tabuleiro[i] != "":
             return True
     # Verificar diagonais
-    if tabuleiro[0] == tabuleiro[5] == tabuleiro[9] and tabuleiro[0] != "":
+    if tabuleiro[0] == tabuleiro[5] == tabuleiro[10] and tabuleiro[0] != "":
         return True
-    if tabuleiro[3] == tabuleiro[5] == tabuleiro[7] and tabuleiro[3] != "":
+    if tabuleiro[1] == tabuleiro[6] == tabuleiro[11] and tabuleiro[1] != "":
+        return True
+    if tabuleiro[3] == tabuleiro[6] == tabuleiro[9] and tabuleiro[3] != "":
+        return True
+    if tabuleiro[2] == tabuleiro[5] == tabuleiro[8] and tabuleiro[2] != "":
         return True
     return False
 while not verificar_fim_de_jogo() and "" in tabuleiro:
