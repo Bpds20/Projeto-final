@@ -12,19 +12,20 @@ def exibir_tabuleiro():
 
 def verificar_fim_de_jogo():
     # Verificar linhas horizontais
-    for i in range(0, 11, 4):
-        if tabuleiro[i] == tabuleiro[i+1] == tabuleiro[i+2] and tabuleiro[i] != "":
+    for i in range(0, 12, 4):
+        if tabuleiro[i] == tabuleiro[i+1] == tabuleiro[i+2] == tabuleiro[i+3] and tabuleiro[i] != "":
             return True
     # Verificar linhas verticais
     for i in range(0, 4):
-        if tabuleiro[i] == tabuleiro[i+3] == tabuleiro[i+6] and tabuleiro[i] != "":
+        if tabuleiro[i] == tabuleiro[i+4] == tabuleiro[i+8] == tabuleiro[i+12] and tabuleiro[i] != "":
             return True
     # Verificar diagonais
-    if tabuleiro[0] == tabuleiro[5] == tabuleiro[9] and tabuleiro[0] != "":
+    if tabuleiro[0] == tabuleiro[5] == tabuleiro[10] == tabuleiro[15] and tabuleiro[0] != "":
         return True
-    if tabuleiro[3] == tabuleiro[5] == tabuleiro[7] and tabuleiro[3] != "":
+    if tabuleiro[3] == tabuleiro[6] == tabuleiro[9] == tabuleiro[12] and tabuleiro[3] != "":
         return True
     return False
+
 
 while not verificar_fim_de_jogo() and "" in tabuleiro:
     exibir_tabuleiro()
