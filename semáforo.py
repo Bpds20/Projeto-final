@@ -5,7 +5,7 @@ jogador_atual = "O"
 def exibir_tabuleiro():
     print(tabuleiro[0] + " | " + tabuleiro[1] + " | " + tabuleiro[2] + " | " + tabuleiro[3])
     print("--+---+--")
-    print(tabuleiro[4] + "  | " + tabuleiro[5] + " | " + tabuleiro[6] + " | " + tabuleiro[7])
+    print(tabuleiro[4] + " | " + tabuleiro[5] + " | " + tabuleiro[6] + " | " + tabuleiro[7])
     print("--+---+--")
     print(tabuleiro[8] + " | " + tabuleiro[9] + " | " + tabuleiro[10] + " | " + tabuleiro[11])
 def verificar_fim_de_jogo():
