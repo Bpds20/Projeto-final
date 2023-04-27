@@ -28,7 +28,13 @@ def verificar_fim_de_jogo():
 
 while not verificar_fim_de_jogo() and "" in tabuleiro:
     exibir_tabuleiro()
-    celula = int(input("Digite a célula para colocar o sinal (de 1 a 11): ")) - 1
+    try:
+        celula = int(input("Digite a célula para colocar o sinal (de 1 a 12): ")) - 1
+        if celula < 0 or celula > 11:
+            raise ValueError()  # levanta um erro caso o valor da célula esteja fora do intervalo válido
+    except ValueError:
+        print("Entrada inválida. Digite um número inteiro entre 1 e 12.")
+        continue  # volta para o início do loop sem executar o restante do código
     if tabuleiro[celula] == "":
         tabuleiro[celula] = jogador_atual
         if jogador_atual == "O":
