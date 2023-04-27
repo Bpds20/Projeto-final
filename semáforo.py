@@ -33,9 +33,9 @@ while not verificar_fim_de_jogo() and "" in tabuleiro:
     if tabuleiro[celula] == "":
         tabuleiro[celula] = jogador_atual
         if jogador_atual == "O":
-            jogador_atual = "X"
-        elif jogador_atual == "X":
             jogador_atual = "O"
+        elif jogador_atual == "X":
+            jogador_atual = "X"
     else:
         print("Célula ocupada. Escolha outra.")
 if verificar_fim_de_jogo():
