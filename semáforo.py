@@ -17,7 +17,7 @@ def verificar_fim_de_jogo():
             return True
     # Verificar linhas verticais
     for i in range(0, 4):
-        if tabuleiro[i] == tabuleiro[i+4] == tabuleiro[i+8] == tabuleiro[i+12] and tabuleiro[i] != "":
+        if tabuleiro[i] == tabuleiro[i+4] == tabuleiro[i+8] == tabuleiro[i+11] and tabuleiro[i] != "":
             return True
     # Verificar diagonais
     if tabuleiro[0] == tabuleiro[5] == tabuleiro[10] == tabuleiro[15] and tabuleiro[0] != "":
