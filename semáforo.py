@@ -1,7 +1,7 @@
 tabuleiro = ["", "", "", "",
              "", "", "", "",
              "", "", "", ""]
-jogador_atual = "O"
+jogador_atual = "X"
 def exibir_tabuleiro():
     print(tabuleiro[0] + " | " + tabuleiro[1] + " | " + tabuleiro[2] + " | " + tabuleiro[3])
     print("---+---+---")
@@ -28,14 +28,15 @@ def verificar_fim_de_jogo():
         return True
     return False
 while not verificar_fim_de_jogo() and "" in tabuleiro:
+    if jogador_atual == "O":
+            jogador_atual = "X"
+    else:
+            jogador_atual = "O"
     exibir_tabuleiro()
     celula = int(input("Digite a célula para colocar o sinal (de 1 a 12): ")) - 1
     if tabuleiro[celula] == "":
         tabuleiro[celula] = jogador_atual
-        if jogador_atual == "O":
-            jogador_atual = "X"
-        elif jogador_atual == "X":
-            jogador_atual = "O"
+        
     else:
         print("Célula ocupada. Escolha outra.")
 if verificar_fim_de_jogo():
