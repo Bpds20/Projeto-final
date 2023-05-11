@@ -9,6 +9,6 @@ print("  ***  ")
 print(" ***** ")
 print("*******")
 
-bu1['text']="   *   \n  ***  \n ***** \n*******"
+bu1['text']="   *   \n  ***  \n ***** \n*******" #triangulo
 
-bu2['text']="*****\n*     *\n*     *\n*****"
+bu2['text']="*****\n*     *\n*     *\n*****" #quadrado
