@@ -1,12 +1,19 @@
 from tkinter import *
 from tkinter import ttk
 import tkinter.messagebox
+import tkinter.colorchooser
+
+
+# color1 = tkinter.colorchooser.askcolor(color=None)
+# print(color1)
 
 root=Tk()
 root.title("Tic Tac Toe")
+label = Label(root)
 
 #add Buttons
 bu1=ttk.Button(root,text=' ')
+
 bu1.grid(row=0,column=0,sticky='snew',ipadx=40,ipady=40)
 bu1.config(command=lambda: ButtonClick(1))
 
@@ -122,6 +129,7 @@ def ButtonClick(id): #REDO
     #for player 1 turn
     if id==1 and bu1['text']==' ' and a==1:
         bu1['text']="X"
+        #label.configure(foreground="red")
         a=0
         b+=1
     if id==2 and bu2['text']==' ' and a==1:
