@@ -45,3 +45,10 @@ if verificar_fim_de_jogo():
 else:
     exibir_tabuleiro()
     print("Empate.")
+
+
+
+
+
+
+
