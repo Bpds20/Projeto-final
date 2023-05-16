@@ -1,11 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 import tkinter.messagebox
-import tkinter.colorchooser
 
-
-# color1 = tkinter.colorchooser.askcolor(color=None)
-# print(color1)
 
 root=Tk()
 root.title("Tic Tac Toe")
