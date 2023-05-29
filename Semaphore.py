@@ -91,7 +91,7 @@ def player_jogada(id):
     printboard()
     if check_win():
         disableButton()
-        tkinter.messagebox.showinfo(title="Vitoria", message="O Jogador " + str(a) + " ganhou após " +str(b)+" jogadas!")
+        tkinter.messagebox.showinfo(title="Vitória", message="O Jogador " + str(a) + " ganhou após " +str(b)+" jogadas!")
         return
     changeplayer() 
 
@@ -345,6 +345,9 @@ def load_game():
     playerdetails["text"] = "Jogada: "+str(b)
     home.withdraw()
 
+def print_regras():
+    print("Regras de jogo:\n\nO semáforo é jogado por 2 jogadores num tableiro 4x3 com 24 peças disponíveis e partilhadas por ambos (8 verdes, 8 amarelas e 8 vermelhas): \n\nCada jogador tem 3 possibilidades no seu turno:\n\n-Colocar uma peça verde sobre o tabuleiro vazio;\n-Sobrepor uma peça verde por uma amarela;\n-Sobrepor uma peça amarela por uma vermelha;\n\nPEÇAS VERMELHAS NÃO PODEM SER SOBREPOSTAS!" )
+
 root=Tk()
 root.withdraw()
 root.title("Semáforo")
@@ -425,24 +428,29 @@ bt.grid(row=0,column=0,sticky='snew',ipadx=60,ipady=60)
 bt.config(command=lambda: jogar(0,0))
 
 bt1=ttk.Button(home,text="Jogador vs Bot Nível 1")
-bt1.grid(row=0,column=1,sticky='snew',ipadx=60,ipady=60)
+bt1.grid(row=1,column=0,sticky='snew',ipadx=60,ipady=60)
 bt1.config(command=lambda: jogar(1,1))
 
 bt2=ttk.Button(home,text="Jogador vs Bot Nível 2")
-bt2.grid(row=1,column=1,sticky='snew',ipadx=60,ipady=60)
+bt2.grid(row=2,column=0,sticky='snew',ipadx=60,ipady=60)
 bt2.config(command=lambda: jogar(1,2))
 
 bt3=ttk.Button(home,text="Jogador vs Bot Nível 3")
-bt3.grid(row=2,column=1,sticky='snew',ipadx=60,ipady=60)
+bt3.grid(row=3,column=0,sticky='snew',ipadx=60,ipady=60)
 bt3.config(command=lambda: jogar(1,3))
 
-bt4=ttk.Button(home,text="Load")
-bt4.grid(row=2,column=0,sticky='snew',ipadx=60,ipady=60)
+bt4=ttk.Button(home,text="Carregar Jogo")
+bt4.grid(row=4,column=0,sticky='snew',ipadx=60,ipady=60)
 bt4.config(command=lambda: load_game())
 if os.path.getsize("savefile.txt") == 0:
     bt4.state(['disabled'])
 else:
     bt4.state(['!disabled'])
+
+bt5=ttk.Button(home, text="Regras de Jogo")
+bt5.grid(row=5,column=0,sticky='snew',ipadx=60,ipady=60)
+bt5.config(command=lambda: print_regras())
+
 
 restartbutton()
 home.mainloop() # loop infinito para a janela do menu
