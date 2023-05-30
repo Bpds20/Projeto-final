@@ -346,8 +346,9 @@ def load_game():
     home.withdraw()
 
 def print_regras():
-    print("Regras de jogo:\n\nO semáforo é jogado por 2 jogadores num tableiro 4x3 com 24 peças disponíveis e partilhadas por ambos (8 verdes, 8 amarelas e 8 vermelhas): \n\nCada jogador tem 3 possibilidades no seu turno:\n\n-Colocar uma peça verde sobre o tabuleiro vazio;\n-Sobrepor uma peça verde por uma amarela;\n-Sobrepor uma peça amarela por uma vermelha;\n\nPEÇAS VERMELHAS NÃO PODEM SER SOBREPOSTAS!" )
+    tkinter.messagebox.showinfo(title="Regras de Jogo", message="O semáforo é jogado por 2 jogadores num tableiro 4x3 com 24 peças disponíveis e partilhadas por ambos (8 verdes, 8 amarelas e 8 vermelhas): \n\nCada jogador tem 3 possibilidades no seu turno:\n\n-Colocar uma peça verde sobre o tabuleiro vazio;\n-Sobrepor uma peça verde por uma amarela;\n-Sobrepor uma peça amarela por uma vermelha;\n\nPEÇAS VERMELHAS NÃO PODEM SER SOBREPOSTAS!")
 
+    
 root=Tk()
 root.withdraw()
 root.title("Semáforo")
