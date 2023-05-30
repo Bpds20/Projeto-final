@@ -348,6 +348,11 @@ def load_game():
 def print_regras():
     tkinter.messagebox.showinfo(title="Regras de Jogo", message="O semáforo é jogado por 2 jogadores num tableiro 4x3 com 24 peças disponíveis e partilhadas por ambos (8 verdes, 8 amarelas e 8 vermelhas): \n\nCada jogador tem 3 possibilidades no seu turno:\n\n-Colocar uma peça verde sobre o tabuleiro vazio;\n-Sobrepor uma peça verde por uma amarela;\n-Sobrepor uma peça amarela por uma vermelha;\n\nPEÇAS VERMELHAS NÃO PODEM SER SOBREPOSTAS!")
 
+def return_to_menu():
+    restartbutton()
+    root.withdraw()
+    home.deiconify()
+    
 
 root=Tk()
 root.withdraw()
@@ -414,13 +419,18 @@ playerturn.grid(row=3,column=0,sticky='snew',ipadx=40,ipady=40)
 playerdetails=ttk.Label(root,text="Jogada: 0")
 playerdetails.grid(row=3,column=3,sticky='snew',ipadx=40,ipady=40)
 
-res=ttk.Button(root,text='Restart')
+res=ttk.Button(root,text='Recomeçar')
 res.grid(row=3,column=1,sticky='snew',ipadx=40,ipady=40)
 res.config(command=lambda: restartbutton())
 
-save=ttk.Button(root,text='Save game')
+save=ttk.Button(root,text='Guardar Jogo')
 save.grid(row=3,column=2,sticky='snew',ipadx=40,ipady=40)
 save.config(command=lambda: save_game())
+
+exit_bu = ttk.Button(root,text='Menu Principal')
+exit_bu.grid(row=3,column=3,sticky='snew',ipadx=40,ipady=40)
+exit_bu.config(command=lambda: return_to_menu())
+
 
 home=Tk()
 home.title("Semáforo")
