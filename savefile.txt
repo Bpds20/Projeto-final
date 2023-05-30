@@ -2,4 +2,4 @@
 2
 0
 0
-[['normal', '1', 'normal', 'normal'], ['normal', 'normal', 'normal', 'normal'], ['normal', 'normal', '1', 'normal']]
+[['1', 'normal', 'normal', 'normal'], ['normal', 'normal', 'normal', 'normal'], ['normal', 'normal', '1', 'normal']]
